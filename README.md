@@ -268,7 +268,7 @@ make && \
 make install | tee ../install.log && \
 make clean
 
-( cw && cd src && git clone https://github.com/ccny-ros-pkg/scan_tools.git && cm )
+( cs && git clone https://github.com/ccny-ros-pkg/scan_tools.git ) && cm
 
 # Note: if you don't want it any more:
 # see: csm.uninstall.log
