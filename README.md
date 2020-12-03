@@ -258,9 +258,15 @@ sudo debfoster libcgal-dev libcgal-demo libcgal-qt5-dev libcgal-ipelets
 # https://answers.ros.org/question/211789/localization-based-on-a-laserscan/
 sudo debfoster libgsl-dev
 
-mkdir -p <your_csm_path>/build
-( cd <your_csm_path> && git clone https://github.com/AndreaCensi/csm )
-( cd <your_csm_path>/build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$HOME/.local -DCMAKE_INSTALL_PREFIX=$HOME/.local ../csm )
+mkdir -p <your_csm_path> && cd <your_csm_path>
+
+git clone https://github.com/AndreaCensi/csm
+
+mkdir build && cd build && \
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$HOME/.local -DCMAKE_INSTALL_PREFIX=$HOME/.local ../csm && \
+make && \
+make install | tee ../install.log && \
+make clean
 
 ( cw && cd src && git clone https://github.com/ccny-ros-pkg/scan_tools.git && cm )
 
