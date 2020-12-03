@@ -102,7 +102,7 @@ sudo debfoster cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev
 sudo debfoster python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff5-dev libdc1394-22-dev  # optional
 sudo debfoster libjasper-dev                                                                                    # sid (unstable) ?
 
-mkdir -p <opencv_dir> && cd <opencv_dir>
+mkdir -p <your_opencv_ws> && cd <your_opencv_ws>
 
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
@@ -126,7 +126,7 @@ make install clean
 
 sudo debfoster libeigen3-dev
 
-mkdir -p <aruco_dir> && cd <aruco_dir>
+mkdir -p <your_aruco_ws> && cd <your_aruco_ws>
 # Download ArUco from : https://sourceforge.net/projects/aruco/files/latest/download
 unzip aruco-3.0.13.zip
 
@@ -143,7 +143,7 @@ env LD_LIBRARY_PATH=~/.local/lib/ ~/.local/bin/aruco_calibration_fromimages LUMI
 env LD_LIBRARY_PATH=~/.local/lib/ ~/.local/bin/aruco_print_marker 70 ./ARUCO_MIP_36h12_00070.png -e -bs 300
 
 # Print Customized Dictionary :
-env LD_LIBRARY_PATH=~/.local/lib/ ~/.local/bin/aruco_print_dictionary <pathToSaveAllImages> <pathTo/myown.dict>
+env LD_LIBRARY_PATH=~/.local/lib/ ~/.local/bin/aruco_print_dictionary <path_to_save_all_images> <path_to/my_own.dict>
 
 # Detect Marker :
 env LD_LIBRARY_PATH=~/.local/lib/ ~/.local/bin/aruco_simple ./P1010976.png -c ./calibration/png/LUMIX-LX3.yml -s 0.166
@@ -159,7 +159,7 @@ env LD_LIBRARY_PATH=~/.local/lib/ ~/.local/bin/aruco_simple ./P1010976.png -c ./
 # http://www.uco.es/investiga/grupos/ava/node/25
 # https://sourceforge.net/projects/markermapper/
 
-mkdir -p <markermapper_dir> && cd <markermapper_dir>
+mkdir -p <your_markermapper_ws> && cd <your_markermapper_ws>
 # Download MarkerMapper from : https://sourceforge.net/projects/markermapper/files/latest/download
 unzip marker_mapper1.0.12.zip
 
@@ -258,7 +258,7 @@ sudo debfoster libcgal-dev libcgal-demo libcgal-qt5-dev libcgal-ipelets
 # https://answers.ros.org/question/211789/localization-based-on-a-laserscan/
 sudo debfoster libgsl-dev
 
-mkdir -p <your_csm_path> && cd <your_csm_path>
+mkdir -p <your_csm_ws> && cd <your_csm_ws>
 
 git clone https://github.com/AndreaCensi/csm
 
