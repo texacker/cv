@@ -207,7 +207,7 @@ sudo debfoster python-rosdep python-rosinstall python-rosinstall-generator pytho
 sudo debfoster python-pip
 sudo pip install -U rosdep rosinstall rosinstall_generator wstool
 
-# 1.2 Initializing rosdep [in case of GFWed :-) ]
+# 1.2 Initializing rosdep [in case of GFWed :-)]
 sudo [ env https_proxy=http://host:port ] rosdep init
 [ env https_proxy=http://host:port ] rosdep update
 
