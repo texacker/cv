@@ -214,9 +214,13 @@ sudo [ env https_proxy=http://host:port ] rosdep init
 # 2. Installation
 sudo debfoster ros-noetic-desktop-full
 source /opt/ros/noetic/setup.bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.profile
 
+# Initializing catkin Workspace
 mkdir -p <your_catkin_ws>/src
 cw && ( cd ./src && catkin_init_workspace ) && catkin_make && source ./devel/setup.bash
+echo 'export CATKIN_WS_PATH="<your_catkin_ws>"' >> ~/.profile
+echo "source $CATKIN_WS_PATH/devel/setup.bash" >> ~/.profile
 
 # Security issue on ROS build farm :
 # 1. http://answers.ros.org/question/325039/apt-update-fails-cannot-install-pkgs-key-not-working/
