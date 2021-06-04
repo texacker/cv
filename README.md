@@ -227,6 +227,11 @@ echo "source $CATKIN_WS_PATH/devel/setup.bash" >> ~/.profile
 # 2. http://wiki.ros.org/melodic/Installation/Ubuntu
 sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
 sudo -E apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+# apt update: signatures were invalid: F42ED6FBAB17C654
+# https://answers.ros.org/question/379190/apt-update-signatures-were-invalid-f42ed6fbab17c654/
+sudo apt-key del C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 ```
 
 ### PCL
