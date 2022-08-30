@@ -2,7 +2,7 @@
 
 ## Edge-based Computational Vision
 
-## Texture Image Segmentation
+## Texture Segmentation
 
 ## 嵌入式系统开发
 ### CAN Utilities
