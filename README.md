@@ -1,8 +1,8 @@
 # Computational Vision
 
-## Edge-based CV
+## Edge-based Computational Vision
 
-## Texture & Pattern Segmentation
+## Texture Segmentation
 
 ## 嵌入式系统开发
 ### CAN Utilities
