@@ -4,7 +4,9 @@
 
 ## Texture Segmentation
 
-## Edge-based Segmentation
+### Texture
+
+### Edge
 
 ## 嵌入式系统开发
 ### CAN Utilities
