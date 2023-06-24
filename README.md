@@ -301,5 +301,5 @@ sudo debfoster libceres1 ceres-solver-doc
 ```
 
 ##  References
-1. [计算机视觉基础](http://product.china-pub.com/8074503).
-1. [计算机视觉：原理、算法、应用及学习](http://product.china-pub.com/8075458).
+1. [计算机视觉基础](http://product.china-pub.com/8074503)
+1. [计算机视觉：原理、算法、应用及学习](http://product.china-pub.com/8075458)
